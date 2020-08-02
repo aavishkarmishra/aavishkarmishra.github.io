@@ -9143,10 +9143,19 @@ textarea.form-control {
 }
 @media (max-width: 450px)
 {
-    .navi{
+  .hero-wrap .text {
+    margin-left: 8% !important;
+}  
+  .navi{
         display: none !important;
     }
     .icons{
         margin-left: 0% !important;
     }
+}
+@media (max-width: 380px)
+{
+  .hero-wrap .text {
+    margin-left: 2% !important;
+}  
 }
