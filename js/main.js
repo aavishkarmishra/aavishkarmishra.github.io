@@ -14,13 +14,7 @@
 
 	var fullHeight = function() {
 
-		var height = $(window).height();
-		console.log(height);
-		$('.js-fullheight').css('height', height*0.9);
-		if ($(window).width() >1000) {
-			
-		}
-		$('.js-fullheight').css('padding-top', height*0.06);
+		$('.js-fullheight').css('height', $(window).height());
 		$(window).resize(function(){
 			$('.js-fullheight').css('height', $(window).height());
 		});
@@ -83,6 +77,56 @@
 
 	onePageClick();
 	
+
+	var carousel = function() {
+		$('.home-slider').owlCarousel({
+	    loop:true,
+	    autoplay: true,
+	    margin:0,
+	    animateOut: 'fadeOut',
+	    animateIn: 'fadeIn',
+	    nav:false,
+	    autoplayHoverPause: false,
+	    items: 1,
+	    navText : ["<span class='ion-md-arrow-back'></span>","<span class='ion-chevron-right'></span>"],
+	    responsive:{
+	      0:{
+	        items:1
+	      },
+	      600:{
+	        items:1
+	      },
+	      1000:{
+	        items:1
+	      }
+	    }
+		});
+
+		$('.carousel-testimony').owlCarousel({
+			center: true,
+			loop: true,
+			autoplay: true,
+			autoplaySpeed:2000,
+			items:1,
+			margin: 30,
+			stagePadding: 0,
+			nav: false,
+			navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
+			responsive:{
+				0:{
+					items: 1
+				},
+				600:{
+					items: 2
+				},
+				1000:{
+					items: 3
+				}
+			}
+		});
+	};
+	carousel();
+
 	$('nav .dropdown').hover(function(){
 		var $this = $(this);
 		// 	 timer;
