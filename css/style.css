@@ -9073,6 +9073,13 @@ textarea.form-control {
   animation: loader-dash 1.5s ease-in-out infinite;
   stroke-linecap: round; }
 
+.subheading {
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700;
+      color: #17b978;
+      letter-spacing: 2px; }
+
 @-webkit-keyframes loader-rotate {
   100% {
     -webkit-transform: rotate(360deg);
